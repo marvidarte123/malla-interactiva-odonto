@@ -1,1 +1,29 @@
+import re
+from collections import defaultdict
+
+texto = """
+(Pega aquí todo tu texto de los ramos, tal como lo compartiste)
+"""
+
+semestres = defaultdict(list)
+semestre_actual = None
+
+for linea in texto.splitlines():
+    linea = linea.strip()
+    if not linea:
+        continue
+    if re.match(r"Semestre [IVX]+", linea):
+        semestre_actual = linea
+    else:
+        match = re.match(r"(.+?)\s+(\d+)\s+Créditos", linea)
+        if match and semestre_actual:
+            nombre = match.group(1).strip()
+            creditos = int(match.group(2))
+            semestres[semestre_actual].append({
+                "nombre": nombre,
+                "creditos": creditos
+            })
+
+# Mostrar resultados por semestre
+for semestre, ramos in s
 
