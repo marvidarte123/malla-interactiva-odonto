@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Odontología</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <h1>Malla Curricular Odontología</h1>
+  <div class="malla">
+
+    <!-- Ejemplo de ramos con data-id y data-reqs -->
+    <div class="semestre">
+      <h2>Semestre I</h2>
+      <div class="ramo" data-id="anat_gen">Anatomía General</div>
+      <div class="ramo" data-id="biocel">Biología Celular y Molecular</div>
+      <div class="ramo" data-id="quim_gen">Química General</div>
+      <div class="ramo" data-id="histo">Histoembriología</div>
+      <div class="ramo" data-id="morfo_dental">Morfología Dental</div>
+      <div class="ramo" data-id="intro_odon">Introducción a la Odontología</div>
+    </div>
+
+    <div class="semestre">
+      <h2>Semestre II</h2>
+      <div class="ramo" data-id="bioetica">Bioética</div>
+      <div class="ramo" data-id="psic">Psicología General</div>
+      <div class="ramo" data-id="bioq">Bioquímica</div>
+      <div class="ramo locked" data-id="anat_estoma" data-reqs="anat_gen">Anatomía Estomatognática</div>
+      <div class="ramo locked" data-id="fisio_ocl" data-reqs="anat_gen">Fisiología de la Oclusión</div>
+      <div class="ramo" data-id="promo1">Promoción y Prevención I</div>
+      <div class="ramo locked" data-id="imagen" data-reqs="quim_gen">Imagenología Aplicada</div>
+    </div>
+
+    <!-- Puedes seguir agregando así todos los semestres -->
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
 
